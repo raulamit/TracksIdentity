@@ -1,0 +1,67 @@
+h2.api {
+	color: #444;
+	font-size: 18px;
+	margin-bottom: 0;
+}
+
+h1.api{
+	height: 45px;
+	line-height: 45px;
+	padding: 0 15px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #3E372E;
+	background: #DDD;
+	background: #DDD -webkit-gradient(linear, left top, left bottom, from(#DDD), to(#CCC));
+	background: #DDD -moz-linear-gradient(#DDD, #CCC);
+	background: #DDD -ms-linear-gradient(#DDD, #CCC);
+	background: #DDD linear-gradient(#DDD, #CCC);
+}
+
+h1.api code {
+    float: right;
+    font-size: 14px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    height: 45px;
+    line-height: 43px;
+  }
+
+h1.api code strong {
+    text-transform: uppercase;
+	margin-right: 5px;
+    color: white;
+    font-size: 12px;
+    padding: 4px 7px;
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px; border-radius: 5px;
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 4px;
+	-moz-box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 4px;
+	-ms-box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 4px; box-shadow:
+	inset rgba(0, 0, 0, 0.3) 0 0 4px;
+  }
+
+h1.api code.get 	strong { background: #090;}
+h1.api code.post 	strong { background: #c90;}
+h1.api code.put 	strong { background: #36f;}
+h1.api code.delete 	strong { background: #c30;}
+
+.apiDetails {
+    display: none;
+}
+
+.api .disclosure {
+  width: 20px;
+  height: 20px;
+  background: url('disclosure_buttons.png') no-repeat left top;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  top: 4px;
+  *display: inline;
+}
+
+.api.open .disclosure {
+    background-position: left bottom;
+}

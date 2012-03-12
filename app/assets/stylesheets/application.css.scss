@@ -1,0 +1,32 @@
+/*
+* This is a manifest file that'll automatically include all the stylesheets available in this directory
+* and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+* the top of the compiled file, but it's generally better to create a new file per style scope.
+*/
+
+/* From app/assets */
+//= require ./tr/tr-reset
+//= require ./tr/ie_fixes
+//= require ./tr/sprites
+//= require ./tr/fonts
+//= require ./tr/tr
+//= require ./tr/apis
+//= require ./tr/donations
+//= require ./tr/project
+//= require ./tr/tables
+//= require ./tr/tables2
+//= require ./tr/util_reports
+//= require ./tr/static_pages
+
+/* From vendor/assets */
+//= require jquery-ui-1.8.17.custom
+//= require buttons
+//= require chosen
+//= require dropdown
+//= require simpleform
+//= require ui-progress-bar
+//= require vertical_menu
+//= require webruppee
+
+/* From lib/assets */
+

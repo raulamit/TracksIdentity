@@ -1,0 +1,75 @@
+// Place all the styles related to the tracks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+td.bottom{border-bottom: 1px solid lightgray; border-right: 1px solid lightgray;}
+td.center{text-align: center;}
+td.top{vertical-align: top;}
+td.mid{vertical-align: middle;}
+td.low{vertical-align: bottom;}
+td.right{text-align: right;}
+td.left{text-align: left;}
+table.showpages{margin: 0px;}
+tr.header{background: transparent url("tableheader.png") repeat-x; height: 28px;}
+tr.header_inpages{background-color: #EDF2F6; height: 20px; border-bottom: 1px dotted #DDDDDD;}
+td.header_inpages{ color: #5E6E7F; padding-top: 4px;}
+td.header{text-shadow: 0 2px 0 white; line-height: 28px; height: 28px; text-align: left; color: #777; border-bottom: 1px solid lightGrey; font-weight: normal;}
+tr.highlight{ border-bottom: 1px solid lightgray; }
+tr.bluegray{ background-color: #EBF0F5; }
+tr.lh_20{ height: 20px; }
+td.lh_20{line-height: 20px; }
+tr.highlight:hover{ background-color: #FFFFDB; }
+td.highlight{ border-bottom: 1px solid #F7F7F7; padding: 3px 0px; padding-right: 30px;}
+td.highlight_small{ border-bottom: 1px solid #F7F7F7; padding: 3px 0px; }
+table.showpages td.left{width: 640px; padding-right: 15px; border-right: 1px solid #E3E4E8;}
+table.showpages td.right{ width: 300px; text-align: left; padding-left: 15px;}
+td.helpbox{ background-color: #FCF4D7; border: 1px solid #D2D9DE; padding: 10px; margin-top: 20px;}
+td.graybox{ background-color: #EEEEEE; border-top: 2px #DDDDDD solid; border-left: 2px #DDDDDD solid; border-right: 2px #DDDDDD solid;border-bottom: 4px #DDDDDD solid;}
+td.lightgraybox{background-color: #EDF3FE; border: 1px #EEEEEE solid;}
+td.helpbox h3{margin: 0px 0px 10px 0px;}
+td.editbar{border-left: 1px solid #D3D3D3;}
+td.pad-left20{padding-left: 20px;}
+td.pad-right10{padding-right: 10px;}
+td.pad-right30{padding-right: 30px;}
+td.pad-right40{padding-right: 40px;}
+td.pad-right100{padding-right: 100px;}
+td.pad-right5p{padding-right: 5%;}
+td.pad-right10p{padding-right: 10%;}
+td.pad-right20p{padding-right: 20%;}
+td.pad-right10p{padding-right: 10%;}
+td.pad-right60{padding-right: 60px;}
+td.howitworks{width: 172px; border : 5px solid #CCCCCC; height: 130px; margin: 0px; padding: 2px;}
+td.howitworks_buffer{width: 20px;margin: 0px;padding: 0px;}
+td.min20 {width: 20px;}
+td.min40 {width: 40px;}
+td.min60 {width: 60px;}
+td.min100 {width: 100px;}
+td.min130 {width: 130px;}
+td.min150 {width: 150px;}
+td.min170 {width: 170px;}
+td.min180 {width: 180px;}
+td.min200 {width: 200px;}
+td.min212 {width: 212px;}
+td.min230 {width: 230px;}
+td.min250 {width: 250px;}
+td.min30p {width: 30%;}
+td.min40p {width: 40%;}
+td.min45p {width: 45%;}
+td.min300 {width: 300px;}
+td.min350 {width: 350px;}
+td.min365 {width: 365px;}
+td.min400 {width: 400px;}
+td.min430 {width: 430px;}
+td.min440 {width: 440px;}
+td.min450 {width: 450px;}
+td.min470 {width: 470px;}
+td.min500 {width: 500px;}
+td.min550 {width: 550px;}
+td.min580 {width: 580px;}
+td.min600 {width: 600px;}
+td.min630 {width: 630px;}
+td.min640 {width: 640px;}
+td.min800 {width: 800px;}
+td.min840 {width: 840px;}
+td.min850 {width: 850px;}
+td.min900 {width: 900px;}

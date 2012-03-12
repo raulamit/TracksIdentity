@@ -1,0 +1,78 @@
+@mixin round($pixel) {
+	-webkit-border-radius: $pixel;
+	-moz-border-radius: $pixel;
+	border-radius: $pixel;
+}
+
+.wrapper {
+  position: relative;
+	width: 960px;
+	margin: 0px auto;
+	padding: 0px;
+}
+
+img.top { vertical-align: text-top; }
+
+img.tilted {
+	transform: rotate(2deg);
+	-ms-transform: rotate(2deg);     /* IE 9 */
+	-webkit-transform: rotate(2deg); /* Safari and Chrome */
+	-o-transform: rotate(2deg);      /* Opera */
+	-moz-transform: rotate(2deg);    /* Firefox */
+}
+
+@mixin notice-base($color) {
+	@include round(4px);
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	background: $color;
+	padding: 10px;
+	width: 76%;
+}
+
+.noticeFlash { @include notice-base(#ddffdd); }
+.errorFlash { @include notice-base(#F08080); }
+
+#closeBox {
+	float: right;
+	position: relative;
+	font-size: small;
+}
+
+.rule{
+	clear: both;
+	height: 0px;
+	overflow: hidden;
+	border-bottom: 1px solid #DDD;
+}
+
+@media print {
+	body {
+		background-color: #FFF;
+	}
+
+	#container {
+		width: auto;
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+
+	#line_items {
+		page-break-before: always;
+	}
+
+	#pdf_link {
+		display: none;
+	}
+}
+
+.shadow {
+	box-shadow: 5px 5px 3px gray;
+	-webkit-box-shadow: 5px 5px 3px gray; /* Safari */
+}
+
+#search_box {
+  margin-top: 5px;
+}

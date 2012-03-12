@@ -1,0 +1,75 @@
+// Place all the styles related to the donations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ul.donationpills{
+	list-style: none; 
+	margin: 0px;
+  padding-left: 0px;
+}
+
+ul.donationpills li:hover {
+  background-color: #fcf4d7;
+  border-top: 1px solid #e3b829;
+  border-bottom: 1px solid #e3b829; }
+
+ul.donationpills li {
+  position: relative;
+  list-style-type: none;
+  margin: 0px;
+  padding: 4px 5px;
+  border-bottom: 1px solid #dddddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px; 
+}
+
+ul.donationpills li code {
+    float: right;
+    font-size: 10px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    height: 45px;
+    line-height: 43px;
+  }
+
+ul.donationpills li code strong {
+    text-transform: uppercase;
+	font-weight: normal;
+	margin-right: 5px;
+    color: white;
+    font-size: 10px;
+    padding: 4px 7px;
+    -webkit-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-ms-border-radius: 5px; border-radius: 5px; 
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 4px; 
+	-moz-box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 4px; 		
+	-ms-box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 4px; box-shadow: 
+	inset rgba(0, 0, 0, 0.3) 0 0 4px; 
+  }
+  
+ul.donationpills li code.green 	strong { background: #090;}
+ul.donationpills li code.orange 	strong { background: #c90;}
+ul.donationpills li code.gray 	strong { background: gray;}
+ul.donationpills li code.red strong { background: #c30;}
+
+.donations_charts{
+	width: 600px; 
+	height: 300px;
+}
+
+.donatebutton{
+	background-color: #FF8109; 
+	width: 135px; 
+	height: 30px;
+	text-align: center;
+	padding: 10px;
+	-webkit-border-radius: 6px; 
+	-moz-border-radius: 6px;
+	margin: 20px 10px;
+}
+
+a.donatebutton, a.donatebutton:hover{
+	font-size: 24px;
+	color: white;
+}

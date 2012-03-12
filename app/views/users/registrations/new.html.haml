@@ -1,0 +1,18 @@
+%title TracksGiving / Sign up
+%h1.thin Sign up
+%br
+%br
+=simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :validate => true) do |f|
+  =devise_error_messages!
+  = f.error_notification
+  =f.input :name, :label => "Organization Name", :autofocus => true
+  =f.input :username
+  =f.input :email, :as => :email
+  %table
+    %tr
+      %td
+        =f.input :password, :wrapper_html => { :id => 'password_wrapper' }, :type => "password", :hint => "Strong passwords contain 8-16 characters, and combine uppercase <br/> letters, lowercase letters, numbers, and symbols.".html_safe
+  %br
+  =f.input :password_confirmation, :as => :password
+  =f.input :terms_of_service, :as => :boolean, :label => "I agree"
+  =f.button :submit, "Sign me up", :id => "submit_button"

@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: tracksidentity
+  host: 127.0.0.1
+  user: ritvvijparrikh
+  password:
+  port: 5432
+  min_messages: warning

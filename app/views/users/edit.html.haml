@@ -1,0 +1,17 @@
+%title TracksGiving / Edit Profile
+- if current_user.id != @user.id
+  %h1.thin= @user.name
+%table
+  %tr
+    %td
+      = render :partial => 'users/sidebar'
+    %td{:style => "border-left: 1px solid #D3D3D3;"}
+      \      
+    %td
+      %h3.zero Basic details
+      %br
+      = simple_form_for @user, :validate => true do |f|
+        = f.error_notification
+        = f.input :name, :disabled => @user.verified
+        = f.button :submit, "Save"
+      %br

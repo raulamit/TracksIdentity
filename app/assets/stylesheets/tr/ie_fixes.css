@@ -1,0 +1,127 @@
+/* http://www.onderhond.com/tools/ie6fixer/ */
+/* IE6 css fixer v0.95: Fri, 20 Jan 2012 04:40:36 +0100 */
+
+/* ============================================= */
+/* safe settings                                 */
+
+/* add display:inline to floated elements */
+#closeBox,
+h1.api code,
+ul.donationpills li code,
+.footer,
+#textRaised,
+#textRemaining,
+#raised,
+#remaining,
+.left .casestudy,
+.grid_30 .blurb,
+.tour_nav_top,
+.tour_nav_center,
+.tour_nav_bottom,
+.imageRight,
+.imageLeft,
+.button-group li,
+.button-group .button,
+.chzn-container-multi .chzn-choices li,
+#top-bar .static-links,
+#global-nav,
+#top-bar ul.head,
+#top-bar ul.head li,
+.ui-menu,
+.ui-menu .ui-menu-item,
+.ui-dialog .ui-dialog-title,
+.ui-tabs .ui-tabs-nav li,
+.ui-tabs .ui-tabs-nav li a,
+.ui-datepicker .ui-datepicker-buttonpane button,
+.simple_form label,
+ul.sidetabs,
+.chzn-rtl .chzn-choices li,.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset,.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,.ui-datepicker-rtl .ui-datepicker-group,
+#top-bar .logo,.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current,.ui-datepicker-multi .ui-datepicker-group,.ui-datepicker-rtl .ui-datepicker-buttonpane button {display:inline;}
+
+/* convert min height values */
+div.bodyContent {height:600px;}
+
+
+/* fix negative margins */
+div.bodyContent,
+.tour_nav div a:hover,.tour_nav div a.current,
+.tour_nav div a:hover,.tour_nav div a.active,
+div.heading,
+.button-group .button,
+.chzn-container-multi .chzn-results,
+.flex-direction-nav li a,
+.ui-accordion .ui-accordion-header .ui-icon,
+.ui-accordion .ui-accordion-content,
+.ui-menu .ui-menu,
+.ui-menu .ui-menu-item a.ui-state-hover,.ui-menu .ui-menu-item a.ui-state-active,
+.ui-button-icon-only .ui-icon,.ui-button-text-icon-primary .ui-icon,.ui-button-text-icon-secondary .ui-icon,.ui-button-text-icons .ui-icon,.ui-button-icons-only .ui-icon,
+.ui-button-icon-only .ui-icon,
+.ui-buttonset .ui-button,
+.ui-dialog .ui-dialog-titlebar-close,
+.ui-slider-horizontal .ui-slider-handle,
+.ui-slider-vertical .ui-slider-handle,
+.ui-datepicker .ui-datepicker-prev span,.ui-datepicker .ui-datepicker-next span,
+.ui-progressbar .ui-progressbar-value,
+
+/* add zoom:1 to overflow:hidden */
+.rule,
+.tourFeatureInfo,
+.chzn-container-single .chzn-single,
+.chzn-container-single .chzn-single span,
+.chzn-container-multi .chzn-choices,
+#session #screen-name,
+.ui-icon,
+.ui-dialog,
+.ui-progress-bar .ui-progress {zoom:1;}
+
+/* add zoom:1 to pos:relative elements */
+.wrapper,
+#closeBox,
+ul.donationpills li,
+.footer,
+#progressbar,
+.grid_30 .blurb,
+.flex-container,
+div.wrapper,
+.tour_nav div a,
+.button,
+.chzn-container,
+.chzn-container-single .chzn-search,
+.chzn-container-multi .chzn-choices .search-choice,
+.chzn-container .chzn-results,
+#top-bar-outer,
+#top-bar .top-bar-inside,
+.flexslider,
+.flexslider .slides li,
+.ui-resizable,
+.ui-accordion .ui-accordion-header,
+.ui-button,
+.ui-dialog .ui-dialog-titlebar,
+.ui-dialog .ui-dialog-content,
+.ui-slider,
+.ui-tabs,
+.ui-tabs .ui-tabs-nav li,
+.ui-datepicker .ui-datepicker-header,
+#password_wrapper,
+.ui-progress-bar {zoom:1;}
+
+/* add transparancy */
+.button-group.minor-group .button.icon:before {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);}
+.chzn-disabled {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);}
+.flex-direction-nav li .disabled {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=30);}
+.ui-helper-zfix {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);}
+.ui-widget-overlay {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=30);}
+.ui-priority-secondary,.ui-widget-content .ui-priority-secondary,.ui-widget-header .ui-priority-secondary {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);}
+.ui-state-disabled,.ui-widget-content .ui-state-disabled,.ui-widget-header .ui-state-disabled {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=35);}
+.ui-widget-shadow {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=45);}
+
+
+/* add zoom:1; display:inline; to inline-block elements */
+#session,
+#session img,
+#session #screen-name,
+.ui-button,
+.meter {zoom:1; display:inline;}
+
+/* add overflow:visible to (submit) buttons */
+ input, button {overflow:visible;}

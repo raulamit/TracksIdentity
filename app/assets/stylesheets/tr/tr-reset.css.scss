@@ -1,0 +1,16 @@
+img {
+  display: inline-block;
+}
+
+table {
+  margin: 0px;
+  padding: 0px;
+  border-collapse: collapse;
+  th {
+    text-align: left;
+  }
+
+  td {
+    vertical-align: top;
+  }
+}

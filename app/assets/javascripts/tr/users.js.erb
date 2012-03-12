@@ -1,0 +1,37 @@
+// As usual
+$(document).ready(users_highcharts_init);
+
+// When the Ajax-event is complete, i.e. when the content is pulled in:
+$(document).bind("end.pjax", users_highcharts_init);
+
+function users_highcharts_init() {
+	if($('#pointData').length == 0) {
+		return true;
+	}
+	
+	var ptData = $('#pointData').val().replace("]", "").replace("[", "").split(',');
+	for(var i = 0; i < ptData.length; i++) { ptData[i] = parseFloat(ptData[i], 10); } 
+	
+  new Highcharts.Chart({
+    chart: {
+      renderTo: "donations_charts"
+    },
+    title: {
+      text: ""
+    },
+    xAxis: {
+      type: "datetime"
+    },
+    yAxis: {
+      title: {
+        text: "Amount donated"
+      }
+    },
+    series: [{
+      name: "All campaigns",
+      pointInterval: <%= 1.day * 1000 %>,
+      pointStart: <%= 4.weeks.ago.to_i * 1000 %>,
+      data: ptData
+		}]
+  });
+}

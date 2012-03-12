@@ -1,0 +1,5 @@
+%ul.sidetabs
+  %li= link_to "Basic Profile", edit_user_path(@user), :class => ((controller_name == "users") && (action_name == "edit"))? "active" : nil
+  %li= link_to "Contact Information", user_util_contacts_path(@user), :class => controller_name == "util_contacts" ? "active" : nil
+  %li= link_to "Add more Email IDs", user_util_emails_path(@user), :class => controller_name == "util_emails" ? "active" : nil
+  %li= link_to "Login Details", edit_user_registration_path(current_user), :class => controller_name == "registrations" ? "active" : nil

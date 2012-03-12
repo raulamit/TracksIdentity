@@ -1,0 +1,36 @@
+ul.sidetabs {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	width: 182px;
+}
+
+ul.sidetabs li a {
+	display: block;
+	padding: 8px 10px 7px 10px;
+	font-size: 12px;
+	text-decoration: none;
+	border: 1px solid transparent;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-top-left-radius: 4px 4px;
+	border-bottom-left-radius: 4px 4px;
+	margin-bottom: 5px;
+}
+
+ul.sidetabs li a.active, ul.sidetabs li a.active:hover {
+	background: url('https://s3-ap-southeast-1.amazonaws.com/tracksgivingstatic/sidebar_selected.gif') 0 0 repeat-x;
+	color: #333;
+	font-weight: bold;
+	text-shadow: 1px 1px 0 white;
+	border: 1px solid #DDD;
+	border-right: none;
+}
+
+ul.sidetabs li a:hover {
+	background: url('https://s3-ap-southeast-1.amazonaws.com/tracksgivingstatic/background-v2.png') 0 0 repeat-x;
+	color: #333;
+}

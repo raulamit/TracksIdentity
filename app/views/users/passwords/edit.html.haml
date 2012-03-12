@@ -1,0 +1,15 @@
+%title TracksGiving / Change your password
+%h2 Change your password
+= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f|
+  = f.error_notification
+  = f.input :reset_password_token, :as => :hidden
+  = f.full_error :reset_password_token
+  %table
+    %tr
+      %td
+        =f.input :password, :wrapper_html => { :id => 'password_wrapper' }, :type => "password", :hint => "Strong passwords contain 8-16 characters, and combine uppercase <br/> letters, lowercase letters, numbers, and symbols.".html_safe
+      %td
+        .meter
+  = f.input :password_confirmation, :label => "Confirm your new password"
+  = f.button :submit, "Change my password"
+

@@ -1,0 +1,50 @@
+#top-bar-outer
+  #top-bar-bg
+  #top-bar
+    .top-bar-inside{:style => "left: 0px;"}
+      %span.logo{:style => "padding-top: 8px;"}
+        %table
+          %tr
+            %td= link_to image_tag('logov2.png'), root_path
+            %td.applicationheader
+              = link_to "TracksGiving", root_path
+      %span.static-links{:style => "padding-top: 4px;"}
+        %span#global-nav
+          %ul.head
+            - if user_signed_in?
+              %li= link_to "Dashboard", user_path(current_user)
+        #sections
+      .active-links
+        %span#session.loggedin
+          - if user_signed_in?
+            %a.profile-links{:href => "#"}
+            %span#screen-name= current_user.name
+          - else
+            %a.profile-links{:href => "#"}= image_tag 'signin.png'
+            %span#screen-name Sign in
+          \
+          \#{image_tag 'https://s3-ap-southeast-1.amazonaws.com/tracksgivingstatic/twitter/downarrow.png', :size => '10x10'}
+          .dropdown
+            %ul.user-dropdown
+              - if user_signed_in?
+                %li= link_to "Edit login details", edit_user_registration_path(current_user)
+                %li= link_to "Add more Email IDs", user_util_emails_path(@user)
+                %li= link_to "Sign Out", sign_out_path, 'data-skip-pjax' => true
+              - else
+                %li
+                  = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+                    Email ID
+                    %br
+                    = f.text_field :login, :style=> "width: 120px;"
+                    %br
+                    Password
+                    %br
+                    = f.password_field :password, :style=> "width: 120px;"
+                    %br
+                    = f.submit "Sign In", :class => "button"
+                    %br
+                    %br
+                %li= link_to "Sign Up", sign_up_path
+                %li= link_to "Forgot password?", new_password_path(resource_name)
+                %li= link_to "Confirmation Email", new_confirmation_path(resource_name)
+                %li= link_to "Customer Support", "https://tracksgiving.freshdesk.com", :target => "_blank", 'data-skip-pjax' => true

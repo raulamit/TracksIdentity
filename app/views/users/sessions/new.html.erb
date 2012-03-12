@@ -1,0 +1,13 @@
+<title>TracksGiving / Sign in</title>
+<h1 class=thin>Sign in</h1>
+<br/><br/>
+<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+	<%= f.error_notification %>
+	<%= f.input :login, :required => true, :autofocus => true, :label => "Email ID" %>
+	<%= f.input :password, :required => true %>
+	<%= f.input :remember_me, :as => :boolean %>
+	<%= f.button :submit, "Sign In" %>
+	<br/>
+	<br/>
+<% end %>

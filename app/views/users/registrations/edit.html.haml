@@ -1,0 +1,29 @@
+%title TracksGiving / Change password
+- if current_user.id != @user.id
+  %h1.thin= @user.name
+%table
+  %tr
+    %td
+      = render :partial => 'users/sidebar'
+    %td{:style => "border-left: 1px solid #D3D3D3;"}
+      \      
+    %td
+      = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put },  :validate => true) do |f|
+        = f.error_notification
+        = devise_error_messages!
+        .inputs
+          = f.input :email, :required => true, :autofocus => true, :label => "Primary Email Id", :hint => "You can login only with this email id."
+          %table
+            %tr
+              %td
+                =f.input :password, :wrapper_html => { :id => 'password_wrapper' }, :type => "password", :hint => "leave it blank if you don't want to change it"
+          %br
+          = f.input :password_confirmation, :as => :password
+          = f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true
+        .actions
+          = f.button :submit, "Update"
+      %h3 Cancel my account
+      %p
+        Unhappy? Email us at
+        = succeed "." do
+          %a{:href => "mailto:#{INFO_EMAIL}"} #{INFO_EMAIL}

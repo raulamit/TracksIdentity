@@ -1,0 +1,75 @@
+<%
+i = 0
+%>
+
+Contact_Service_<%= i=i+1 %>:
+ id: <%= i %>
+ name: CONTACT_SERVICE
+ constant_value: CS_E
+ display_value: Email
+ sort_order: 1
+ is_active: true
+
+Contact_Service_<%= i=i+1 %>:
+ id: <%= i %>
+ name: CONTACT_SERVICE
+ constant_value: CS_F
+ display_value: Facebook
+ sort_order: 2
+ is_active: true
+
+Contact_Service_<%= i=i+1 %>:
+ id: <%= i %>
+ name: CONTACT_SERVICE
+ constant_value: CS_L
+ display_value: LinkedIn
+ sort_order: 9
+ is_active: true
+
+Contact_Service_<%= i=i+1 %>:
+ id: <%= i %>
+ name: CONTACT_SERVICE
+ constant_value: CS_M
+ display_value: Mobile
+ sort_order: 4
+ is_active: true
+
+Contact_Service_<%= i=i+1 %>:
+ id: <%= i %>
+ name: CONTACT_SERVICE
+ constant_value: CS_P
+ display_value: Phone
+ sort_order: 5
+ is_active: true
+
+Contact_Service_<%= i=i+1 %>:
+ id: <%= i %>
+ name: CONTACT_SERVICE
+ constant_value: CS_S
+ display_value: Skype
+ sort_order: 6
+ is_active: true
+
+Contact_Service_<%= i=i+1 %>:
+ id: <%= i %>
+ name: CONTACT_SERVICE
+ constant_value: CS_T
+ display_value: Twitter
+ sort_order: 7
+ is_active: true
+
+Contact_Service_<%= i=i+1 %>:
+ id: <%= i %>
+ name: CONTACT_SERVICE
+ constant_value: CS_Y
+ display_value: Youtube
+ sort_order: 8
+ is_active: true
+
+Contact_Service_<%= i=i+1 %>:
+ id: <%= i %>
+ name: CONTACT_SERVICE
+ constant_value: CS_WE
+ display_value: Website
+ sort_order: 3
+ is_active: true

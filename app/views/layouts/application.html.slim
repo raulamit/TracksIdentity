@@ -1,0 +1,33 @@
+= render :partial => 'shared/header'
+javascript:
+    $(document).ready(function(){
+        $('body')
+            .bind('start.pjax', function() {
+              $('#loading').show();
+              $('#closeBox').click();
+            })
+            .bind('end.pjax', function() {
+        $('#loading').hide();
+        if($('form[data-validate]').length) {
+          $('form[data-validate]').validate();
+        }
+      });
+    });
+
+body
+    = render :partial => 'shared/topbar'
+    .wrapper
+      - flash_msg = flash[:notice]
+      - if !flash_msg.nil? and flash_msg.include? "Error"
+          .errorFlash
+            = flash_msg
+            #closeBox= link_to "[X]", "#"
+      - elsif !flash_msg.nil?
+          .noticeFlash
+          = flash_msg
+          #closeBox= link_to "[X]", "#"
+      div(id="loading" style="display:none;")
+        p Loading...
+      div(data-pjax-container="true")
+        = yield
+    input(type="hidden" id="current_user" value="#{current_user}")

@@ -1,0 +1,5 @@
+<p>Dear <%= @resource.name %>,</p>
+<p>Please <%= link_to 'confirm your account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %>.</p>
+<p>We want your TracksGiving experience to be wonderful, so feel free to respond to this email if you have any questions or issues. We’d be happy to help!</p>
+<p>Cheers,</p>
+<p>-The TracksGiving Team</p>

@@ -1,0 +1,35 @@
+%title TracksGiving / Contact Information
+- if current_user.id != @user.id
+  %h1.thin= @user.name
+%table
+  %tr
+    %td= render :partial => 'users/sidebar'
+    %td{:style => "border-left: 1px solid #D3D3D3;"}
+      \      
+    %td
+      %h3.thin Ways people can get in touch with you.
+      %table
+        - @util_contacts.each do |contact|
+          %tr.highlight
+            %td= util_contact_icon(contact)
+            %td.min600.mid
+              - if contact.is_link
+                - if contact.service == "CS_E"
+                  = mail_to contact.identifier
+                - else  
+                  = link_to contact.identifier, contact.identifier
+              - else
+                = contact.identifier
+            %td
+              - if contact.service != "CS_E"
+                = delete_link_sprite user_util_contact_path(contact.user, contact)
+      %br
+      - if @contact_decodes.first != nil
+        = form_for [@user, @util_contact], :validate => true do |f|
+          = render "shared/errors", :target => @util_contact
+          = f.hidden_field :user_id, :value => @user.id
+          = f.collection_select :service, @contact_decodes, :id, :display_value
+          &nbsp; &nbsp;
+          = f.text_field :identifier
+          &nbsp; &nbsp;
+          = f.submit 'Add', :class => 'button'

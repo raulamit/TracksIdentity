@@ -1,0 +1,36 @@
+#progressbar {
+    position: relative;
+    height: 28px;
+    color: #000;
+}
+
+#textRaised {
+    float: left;
+    color: #000;
+}
+
+#textRemaining {
+    float: right;
+    color: #000;
+}
+
+#raised {
+    margin-top: 4px;
+    margin-left: 4px;
+    float: left;
+    font-size: 1.2em;
+    // To overlay on top of the progressbar. Do not increase z-index more than that of #top-bar-outer
+    z-index: 1;
+    position: relative;
+}
+
+#remaining {
+    margin-top: 4px;
+    margin-right: 4px;
+    float: right;
+    font-size: 1.2em;
+    // To overlay on top of the progressbar. Do not increase z-index more than that of #top-bar-outer
+    z-index: 1;
+    position: relative;
+}
+

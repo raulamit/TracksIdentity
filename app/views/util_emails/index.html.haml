@@ -1,0 +1,30 @@
+%title TracksGiving / Other Email IDs
+- if current_user.id != @user.id
+  %h1.thin= @user.name
+%table
+  %tr
+    %td
+      = render :partial => 'users/sidebar'
+    %td{:style => "border-left: 1px solid #D3D3D3;"}
+      \      
+    %td
+      %h3.thin Please add all your email ids (business, personal, etc.) here so all such donations are aggregated under your account and appropriate consolidated tax exemption receipts can be generated.
+      %br
+      %br
+      %table
+        - @util_emails.each do |util_email|
+          %tr{:style => cycle("background-color:#F5F5F5;", "background-color:white;")}
+            %td.min400.mid
+              = util_email.email
+            %td
+              = util_email_status(util_email).html_safe
+              - if !util_email.is_confirmed
+                = delete_link_sprite [@user, util_email]
+      %br
+      = form_for [@user, @util_email], :validate => true do |f|
+        = render "shared/errors", :target => @util_email
+        = f.hidden_field :user_id, :value => @user.id
+        = f.text_field :email
+        &nbsp; &nbsp;
+        = f.submit 'Add', :class => 'button'
+
