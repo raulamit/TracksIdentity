@@ -27,7 +27,7 @@ Tracksidentity::Application.configure do
     # Expands the lines which load the assets
     config.assets.debug = false
 
-    config.action_mailer.default_url_options = { :host => 'localhost:8080' }
+    config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
     SERVER_PORT = "8080"
     BASE_URL = "http://localhost:#{SERVER_PORT}"
